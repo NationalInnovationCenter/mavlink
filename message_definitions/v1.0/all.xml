@@ -39,5 +39,6 @@
     commands: 50000 - 50099
   -->
   <include>cubepilot.xml</include>
+  <include>nicnepal.xml</include>
   <messages/>
 </mavlink>
