@@ -8,6 +8,10 @@
     <enum name="NIC_NEPAL_TEST_ENUM">
       <entry value="1" name="NIC_NEPAL_TEST_ENUM_VALUE_1"/>
     </enum>
+    <enum name="MAV_CMD_NIC_ACTUATOR_STATUS">
+      <entry value="0" name="MAV_CMD_NIC_ACTUATOR_STATUS_OFF"/>
+      <entry value="1" name="MAV_CMD_NIC_ACTUATOR_STATUS_ON"/>
+    </enum>
   </enums>
   <messages>
     <message id="13100" name="NIC_TEST">
@@ -25,5 +29,18 @@
       <field type="float" name="accel_cal_y">Accel Y calibration.</field>
       <field type="float" name="accel_cal_z">Accel Z calibration.</field>
     </message>
+    <message id="13101" name="MAV_CMD_NIC_ACTUATOR_ACTUATE">
+      <description>Sample message for changing the state of an actuator.</description>
+      <field type="int16_t" name="actuator_output">Actuator output.</field>
+    </message>
+    <message id="13102" name="MAV_NIC_ACTUATOR_STATE">
+      <description>Sample message for getting the state of an actuator.</description>
+      <field type="int16_t" name="actuator_output_status">Actuator output status.</field>
+    </message>
+    <message id="13103" name="MAV_NIC_SENSOR_STATE">
+      <description>Sample message for getting the state of a sensor.</description>
+      <field type="float" name="sensor_value">Sensor measurement value.</field>
+    </message>
+
   </messages>
 </mavlink>
